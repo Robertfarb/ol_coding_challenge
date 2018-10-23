@@ -13,5 +13,6 @@ def get_dimension(json_str)
       arr_dimension = sub_dimension + 1 if sub_dimension + 1 > arr_dimension
     end
   end
-  return arr_dimension
+  
+  arr_dimension
 end
