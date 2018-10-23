@@ -17,8 +17,3 @@ class FileFinder
     file_paths
   end
 end
-
-
-# Tests
-shitty_listings = FileFinder.new("www.shittylistings.com")
-p shitty_listings.find_word_in_files("www.shittylistings.com")
