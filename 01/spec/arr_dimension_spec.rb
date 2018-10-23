@@ -3,8 +3,7 @@ require 'arr_dimension'
 
 describe "#array_dimension" do
   before(:each) do
-    @input_3d = "[1, [2, 3, [4]]]" # [ '42', '36' ]
-    @input2 = "[[2], [2, [3]]]"
+    @input3d = "[[2], [2, [3]]]"
     @uneven_input = "[[["
   end
 
@@ -17,7 +16,7 @@ describe "#array_dimension" do
   end
 
   it "correctly counts dimensions of 3d array" do
-    expect(get_dimension(@input2)).to eq(3)
+    expect(get_dimension(@input3d)).to eq(3)
   end
 
   it "does not modify original json str" do

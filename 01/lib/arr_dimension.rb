@@ -16,3 +16,6 @@ def get_dimension(json_str)
   
   arr_dimension
 end
+
+# Time complexity: O(n)
+# Space complexity: O(1)
