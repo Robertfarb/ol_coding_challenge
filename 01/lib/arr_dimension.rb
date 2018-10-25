@@ -8,7 +8,7 @@ def get_dimension(json_str)
   json_arr = json_str.is_a?(String) ? JSON.parse(json_str) : json_str
   arr_dimension = 1
 
-  json_arr.each do |el|
+  json_arr.each do |el| # O(n) n = number of elements in json_arr
     if el.is_a?(Array)
       # Recursively call get_dimension on the array, re-convert into a string so it passes first check.
       sub_dimension = get_dimension(el.to_s)
@@ -21,6 +21,5 @@ end
 
 
 # Time complexity: 
-## Best case: O(n) - n = number of elements in array
-## Worst case: O(nk) - n = number of elements in array, k = number of elements in subarray
-# Space complexity: O(1)
+## Worst case: O(n^k), where n = number of elements in array, k = number of elements in subarray
+# Space complexity: O(n)
