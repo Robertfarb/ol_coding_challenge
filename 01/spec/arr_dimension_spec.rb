@@ -26,7 +26,7 @@ describe "#array_dimension" do
     expect(duped_str).to eq(json_str)
   end
 
-  it "throws an error when input array is uneven" do
+  it "throws an error when input array is uneven (invalid JSON)" do
     expect{get_dimension(@uneven_input)}.to raise_error
   end
 end
